@@ -15,9 +15,9 @@
 \end{tabular}
 \end{center} 
 
-Dies ist eine \LaTeX-Vorlage für Übungszettelabgaben im Fach Informatik, die das \texttt{listingsutf8}-Paket nutzt.
-Dieses ist in der Regel sofort nutzbar und erfordert keine weitere Einrichtung.
-Das Syntax Highlighting ist hier jedoch nicht ganz so detailliert wie beim \texttt{minted}-Paket, für das in meinem Git-Repository\footnote{\url{https://github.com/phist91/latex-templates}} ebenfalls eine Vorlage bereitgestellt wird.
+Dies ist eine \LaTeX-Vorlage für Übungszettelabgaben im Fach Informatik, die das \texttt{minted}-Paket nutzt.
+Im Gegensatz zu den standardmäßigen \texttt{listings}-Umgebungen, für die in meinem Git-Repository\footnote{\url{https://github.com/phist91/latex-templates}} ebenfalls eine Vorlage bereitgestellt wird, muss man einige Vorbereitungen treffen, damit \texttt{minted} (und auch diese Vorlage) benutzt werden kann.
+Belohnt wird man dafür mit einem schöneren und deutlich differenzierteren automatischen Syntax Highlighting.
 Nachfolgend gibt es ein paar Hinweise, wie diese Vorlage zu verwenden ist.
 
 \subsection*{Disclaimer}
@@ -25,19 +25,24 @@ Ich kann leider grundsätzlich keinen \LaTeX-Support anbieten und verweise daher
 Sucht man den LaTeX-Befehl für ein bestimmtes Symbol, ist Detexify\footnote{\url{http://detexify.kirelabs.org/}} praktisch.
 
 \subsection*{Verwendung}
-Als Test sollte man versuchen, die Datei \texttt{abgaben-listings.tex} in einem TeX-Editor zu öffnen und zu kompilieren.
+\texttt{minted} basiert auf der Programmiersprache Python\footnote{\url{https://www.python.org/downloads/}}.
+Damit man es zum Laufen bekommt, muss man allerdings keine Kenntnisse diesbezüglich mitbringen, sondern lediglich eine aktuelle Version installieren.
+Im Anschluss muss noch \texttt{Pygments} eingerichtet werden.
+Details dazu finden sich in Abschnitt 2.1 der \texttt{minted}-Dokumentation\footnote{\url{https://ctan.org/pkg/minted?lang=de}}.
+
+Als Test sollte man versuchen, die Datei \texttt{abgaben-minted.tex} in einem TeX-Editor zu öffnen und zu kompilieren.
 Dabei handelt es sich um den TeX-Code zu genau diesem Dokument.
 Wenn das nicht klappt, kann das folgende Gründe haben:
 \begin{itemize}
-	\item In den Umgebungsvariablen des Systems fehlt das Verzeichnis der \LaTeX-Distribution.
+	\item In den Umgebungsvariablen des Systems fehlt das Verzeichnis der \LaTeX-Distribution oder zu Python.
 	\item Der Compiler wird nicht mit der Shell-Escape-Option aufgerufen.
 		Ggfs. sollte in den Einstellungen des Editors nachgeschaut werden, dass \texttt{pdflatex} mit der Option \texttt{-shell-escape} aufgerufen wird.
-	\item Irgendwas anderes. Man prüfe die Ausgabe des Compilers.
+	\item Irgendwas anderes. Man prüfe die Ausgabe des Compilers und ziehe ggfs. die \texttt{minted}-Dokumentation zurate.
 \end{itemize}
 Wenn alles geklappt hat, kann man diese Vorlage verwenden.
 Ich habe als Einstiegshilfe unten drei Beispiele zur Einbindung von C-Code eingefügt.
-Die Verwendung der entsprechenden TeX-Befehle sollte anhand der Datei \texttt{abgaben-listings.tex} erschließbar sein.
-Weitere Hinweise und Konfigurationsmöglichkeiten findet man in der Paketdokumentation\footnote{\url{http://texdoc.net/texmf-dist/doc/latex/listings/listings.pdf}.}.
+Die Verwendung der entsprechenden TeX-Befehle sollte anhand der Datei \texttt{abgaben-minted.tex} erschließbar sein.
+Weitere Hinweise und Konfigurationsmöglichkeiten findet man in der Paketdokumentation.
 
 \textbf{Nicht vergessen:} Ein automatisches Syntax Highlighting entbindet \textbf{niemals} von der Pflicht, gut lesbaren und gut nachvollziehbaren Code zu produzieren.
 
@@ -49,9 +54,9 @@ Phil Steinhorst \\
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Beispiel für direkt eingegebenen C-Code:}
 
-\begin{lstlisting}[language=c]
+\subsection*{Beispiel für direkt eingegebenen C-Code:}
+\begin{minted}{c}
 #include <stdio.h>
 
 int main(int argc, char** argv){
@@ -61,17 +66,19 @@ int main(int argc, char** argv){
 	}
 	return 0;
 }
-\end{lstlisting}
+\end{minted}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Beispiel für C-Code, der aus einer eigenen Datei eingebunden wird:}
 
-\lstinputlisting[language=c]{programm.c}
+\inputminted{c}{programm.c}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\textbf{Beispiel für Inline-C-Code:} \lstinline[language=c]|int main(int argc, char** argv)|
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Beispiel für Inline-C-Code:} \mintinline{c}{int main(int argc, char** argv)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \end{document}

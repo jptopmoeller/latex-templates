@@ -15,3 +15,4 @@ https://github.com/phist91/latex-templates
 
 ## Vorhandene Vorlagen
 * `abgaben-listings`: Informatik-Übungszettelabgaben mit Listings
+* `abgaben-minted`: Informatik-Übungszettelabgaben mit minted
