@@ -1,0 +1,77 @@
+%!TEX TS-program = pdflatex
+%!TEX TS-options = -shell-escape
+% Author: Phil Steinhorst, p.st@wwu.de
+% https://github.com/phist91/latex-templates
+
+\newcommand{\obenlinks}{Name der Vorlesung}		% hier Name der Veranstaltung eintragen
+\input{config.tex}	% Präambel (ohne die geht nichts!)
+\begin{document}
+\begin{center}
+	\begin{tabular}{|rlp{4cm}rl|}
+	\hline
+	 \textbf{Übungsblatt:} & 13 &  & \textbf{1. Abgabepartner*in:} & Alan Turing  \\
+	     \textbf{Aufgabe:} & 37 &  & \textbf{2. Abgabepartner*in:} & Donald Knuth \\
+	\textbf{Abgabegruppe:} & 42 &  & \textbf{3. Abgabepartner*in:} & Ada Lovelace \\ \hline
+\end{tabular}
+\end{center} 
+
+Dies ist eine \LaTeX-Vorlage für Übungszettelabgaben im Fach Informatik, die das \texttt{listingsutf8}-Paket nutzt.
+Dieses ist in der Regel sofort nutzbar und erfordert keine weitere Einrichtung.
+Das Syntax Highlighting ist hier jedoch nicht ganz so detailliert wie beim \texttt{minted}-Paket, für das in meinem Git-Repository\footnote{\url{https://github.com/phist91/latex-templates}} ebenfalls eine Vorlage bereitgestellt wird.
+Nachfolgend gibt es ein paar Hinweise, wie diese Vorlage zu verwenden ist.
+
+\section*{Disclaimer}
+Ich kann leider grundsätzlich keinen \LaTeX-Support anbieten und verweise daher auf gängige Suchmaschinen und die \TeX-Community von StackExchange\footnote{\url{https://tex.stackexchange.org/}}.		
+Sucht man den LaTeX-Befehl für ein bestimmtes Symbol, ist Detexify\footnote{\url{http://detexify.kirelabs.org/}} praktisch.
+
+\section*{Verwendung}
+Als Test solltet ihr versuchen, die Datei \texttt{abgaben-listings.tex} in einem TeX-Editor zu öffnen und zu kompilieren.
+Dabei handelt es sich um den TeX-Code zu genau diesem Dokument.
+Wenn das nicht klappt, kann das folgende Gründe haben:
+\begin{itemize}
+	\item In den Umgebungsvariablen des Systems fehlt das Verzeichnis der \LaTeX-Distribution.
+	\item Der Compiler wird nicht mit der Shell-Escape-Option aufgerufen.
+		Ggfs. sollte in den Einstellungen des Editors nachgeschaut werden, dass \texttt{pdflatex} mit der Option \texttt{-shell-escape} aufgerufen wird.
+	\item Irgendwas anderes. Man prüfe die Ausgabe des Compilers.
+\end{itemize}
+Wenn alles geklappt hat, könnt ihr diese Vorlage verwenden.
+Ich habe als Einstiegshilfe unten drei Beispiele zur Einbindung von C-Code eingefügt.
+Die Verwendung der entsprechenden TeX-Befehle sollte anhand der Datei \texttt{abgaben-listings.tex} erschließbar sein.
+Weitere Hinweise und Konfigurationsmöglichkeiten findet man in der Paketdokumentation\footnote{\url{http://texdoc.net/texmf-dist/doc/latex/listings/listings.pdf}.}.
+
+\textbf{Nicht vergessen:} Ein automatisches Syntax Highlighting entbindet \textbf{niemals} von der Pflicht, gut lesbaren und gut nachvollziehbaren Code zu produzieren.
+
+\begin{flushright}
+Phil Steinhorst \\
+\url{https://github.com/phist91/latex-templates}
+\end{flushright}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Beispiel für direkt eingegebenen C-Code:}
+
+\begin{lstlisting}[language=c]
+#include <stdio.h>
+
+int main(int argc, char** argv){
+	int i;
+	for(i = 0; i < argc; i++){
+		printf("%s \n", argv[i]);
+	}
+	return 0;
+}
+\end{lstlisting}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Beispiel für C-Code, der aus einer eigenen Datei eingebunden wird:}
+
+\lstinputlisting[language=c]{programm.c}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Beispiel für Inline-C-Code:} \lstinline[language=c]|int main(int argc, char** argv)|
+
+
+\end{document}
