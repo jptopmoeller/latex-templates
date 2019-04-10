@@ -17,3 +17,4 @@ https://github.com/phist91/latex-templates
 * `abgaben-listings`: Informatik-Übungszettelabgaben mit Listings
 * `abgaben-minted`: Informatik-Übungszettelabgaben mit minted
 * `slides-wwu`: Vorlage für Präsentationsfolien im WWU-Design
+* `how-to-tex`: Minimale LaTeX-Einführung, gehalten im Rahmen der Vorlesung *Informatik I* im Wintersemester 2017/18
