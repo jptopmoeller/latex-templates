@@ -10,7 +10,7 @@ Daher verweise ich auf:
 * [Detexify](http://detexify.kirelabs.org/classify.html)
 
 Phil Steinhorst <br/>
-https://github.com/phist91/latex-templates
+https://gitlab.com/phist91/latex-templates
 
 
 ## Vorhandene Vorlagen
@@ -21,4 +21,4 @@ https://github.com/phist91/latex-templates
 
 ## Abschlussarbeiten
 Als Vorlage für Abschlussarbeiten kann ich [Clean Thesis von Ricardo Langner](http://cleanthesis.der-ric.de/) empfehlen.
-Ich selbst habe diese in leicht abgeänderter Form für meine [Masterarbeit](https://www.github.com/phist91/gc-thesis) im Fach Informatik verwendet.
+Ich selbst habe diese in leicht abgeänderter Form für meine [Masterarbeit](https://gitlab.com/phist91/gc-thesis) im Fach Informatik verwendet.
