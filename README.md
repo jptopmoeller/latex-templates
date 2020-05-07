@@ -2,6 +2,8 @@
 
 Dies ist ein Git-Repository mit einigen LaTeX-Vorlagen, die ich im Laufe der Zeit erstellt oder abgeändert habe.
 Sie können frei verwendet, weitergegeben oder angepasst werden.
+[Hier geht's zum Download!](https://gitlab.com/phist91/latex-templates/-/archive/master/latex-templates-master.zip)
+
 Ich bin dankbar für Verbesserungsvorschläge jeglicher Art, einen LaTeX-Support kann ich jedoch nicht anbieten.
 Daher verweise ich auf:
 
