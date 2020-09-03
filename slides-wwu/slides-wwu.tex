@@ -2,11 +2,11 @@
 %!TEX TS-options = -shell-escape
 \PassOptionsToPackage{force}{filehook}
 \documentclass[10pt,
-	wide,
-	xcolor={x11names},
-	hyperref={colorlinks=false},
-	%handout,		% steuert Anzeige der einzelnen Animationsschritte
-	pantone312]{beamer}		% Auswahl des Farbschemas (siehe wwustyle.sty)
+  wide,
+  xcolor={x11names},
+  hyperref={colorlinks=false},
+  %handout,    % steuert Anzeige der einzelnen Animationsschritte
+  pantone312]{beamer}    % Auswahl des Farbschemas (siehe wwustyle.sty)
 \input{config.tex}
 
 \author{Phil Steinhorst (\texttt{p.st@wwu.de})}
@@ -16,89 +16,89 @@
 
 \begin{document}
 \begin{frame}[plain]
-  \maketitle		% Titelfolie ausgeben
+  \maketitle    % Titelfolie ausgeben
 \end{frame}
 
 \begin{frame}[t]{Agenda}
-	% Inhaltsverzeichnis ausgeben, nur sections.
-	\tableofcontents[hidesubsections, hideothersubsections]
+  % Inhaltsverzeichnis ausgeben, nur sections.
+  \tableofcontents[hidesubsections, hideothersubsections]
 \end{frame}
 
 \section{Allgemeines}
 \begin{frame}{Allgemeines}
-	Dies ist eine \LaTeX-Vorlage für Präsentationsformeln im WWU-Design (angelehnt an die offizielle Vorlage).
+  Dies ist eine \LaTeX-Vorlage für Präsentationsformeln im WWU-Design (angelehnt an die offizielle Vorlage).
 \end{frame}
 
 \section{Disclaimer}
 \begin{frame}[t]{Disclaimer}
 \begin{itemize}[<+->]
-	\item Ich kann leider grundsätzlich keinen \LaTeX-Support anbieten.
-	\item Abhilfe:
-	\begin{itemize}
-		\item Gängige Suchmaschinen
-		\item \TeX-Community von \href{https://tex.stackexchange.org}{\underline{StackExchange}}
-		\item \href{http://detexify.kirelabs.org}{\underline{Detexify}}
-		\item Beamer class user guide auf \href{https://ctan.org/tex-archive/macros/latex/contrib/beamer/}{\underline{CTAN}}
-	\end{itemize}
+  \item Ich kann leider grundsätzlich keinen \LaTeX-Support anbieten.
+  \item Abhilfe:
+  \begin{itemize}
+    \item Gängige Suchmaschinen
+    \item \TeX-Community von \href{https://tex.stackexchange.org}{\underline{StackExchange}}
+    \item \href{http://detexify.kirelabs.org}{\underline{Detexify}}
+    \item Beamer class user guide auf \href{https://ctan.org/tex-archive/macros/latex/contrib/beamer/}{\underline{CTAN}}
+  \end{itemize}
 \end{itemize}
 \end{frame}
 
 \section{Verwendung}
 \begin{frame}[t]{Verwendung}
-	\begin{itemize}[<+->]
-		\item Wie die üblichen Beamer-Klassen auch.
-		\item Zusätzlich eingebundene Pakete:
-		\begin{itemize}
-			\item Einige Mathe-Pakete und Shortcuts
-			\item TikZ-Pakete
-			\item Quellcode-Einbindung mit \texttt{listingsutf8}
-			\minoritem \minor{Ersetzung von \texttt{listingsutf8} durch \texttt{minted} möglich}
-			\item Bibliographie mit biber-Backend \cite{biblatex-ctan}
-		\end{itemize}
-	\end{itemize}
+  \begin{itemize}[<+->]
+    \item Wie die üblichen Beamer-Klassen auch.
+    \item Zusätzlich eingebundene Pakete:
+    \begin{itemize}
+      \item Einige Mathe-Pakete und Shortcuts
+      \item TikZ-Pakete
+      \item Quellcode-Einbindung mit \texttt{listingsutf8}
+      \minoritem \minor{Ersetzung von \texttt{listingsutf8} durch \texttt{minted} möglich}
+      \item Bibliographie mit biber-Backend \cite{biblatex-ctan}
+    \end{itemize}
+  \end{itemize}
 \end{frame}
 
 \section{Quellcode-Einbindung}
 \begin{frame}[t]{Quellcode-Einbindung}
-	\textbf{Beispiel für Quellcode aus Datei:}
-	\lstinputlisting[language=c]{programm.c}
-	
-	\textbf{Beispiel für Inline-C-Code:} \lstinline[language=c]|int main(int argc, char** argv)|
+  \textbf{Beispiel für Quellcode aus Datei:}
+  \lstinputlisting[language=c]{programm.c}
+  
+  \textbf{Beispiel für Inline-C-Code:} \lstinline[language=c]|int main(int argc, char** argv)|
 \end{frame}
 
 \begin{frame}[t,fragile]{}
 \textbf{Beispiel für direkt eingegebenen C-Code:}
 \begin{itemize}
-	\item Erfordert \texttt{fragile}-Option im Frame-Header
+  \item Erfordert \texttt{fragile}-Option im Frame-Header
 \end{itemize}
 
 \begin{lstlisting}[language=c]
 #include <stdio.h>
 
 int main(int argc, char** argv){
-	int i;
-	for(i = 0; i < argc; i++){
-		printf("%s \n", argv[i]);
-	}
-	return 0;
+  int i;
+  for(i = 0; i < argc; i++){
+    printf("%s \n", argv[i]);
+  }
+  return 0;
 }
 \end{lstlisting}
 \end{frame}
 
 \begin{frame}[c]{}
-	\begin{alertblock}{Warnung}
-		Ein automatisches Syntax Highlighting entbindet \textbf{niemals} von der Pflicht, gut lesbaren und gut nachvollziehbaren Code zu produzieren.
-	\end{alertblock}
-	
-	\pause
-	
-	\begin{flushright}
-	Phil Steinhorst \\
-	\url{https://github.com/phist91/latex-templates}
-	\end{flushright}
+  \begin{alertblock}{Warnung}
+    Ein automatisches Syntax Highlighting entbindet \textbf{niemals} von der Pflicht, gut lesbaren und gut nachvollziehbaren Code zu produzieren.
+  \end{alertblock}
+  
+  \pause
+  
+  \begin{flushright}
+  Phil Steinhorst \\
+  \url{https://github.com/phist91/latex-templates}
+  \end{flushright}
 \end{frame}
 
 \begin{frame}[c]{Literatur}
-	\printbibliography
+  \printbibliography
 \end{frame}
 \end{document}

@@ -1,118 +1,115 @@
 
 % Basics und Codierung
 % ===========================================================
-\usepackage{wwustyle}
-\usepackage[ngerman]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[german=quotes]{csquotes}
-\usepackage{scrtime}
-\usepackage{etex}
-\usepackage{shellesc}
+  \usepackage{wwustyle}
+  \usepackage[ngerman]{babel}
+  \usepackage[T1]{fontenc}
+  \usepackage[german=quotes]{csquotes}
+  \usepackage{etex}
 % ===========================================================
 
 
 % Fonts und Typographie
 % ===========================================================
-\usepackage{sourcecodepro}
-\usepackage[default]{sourcesanspro}
-\usepackage{nimbusmononarrow}
-\usepackage{ellipsis}
-\newcommand{\bet}[1]{\textbf{\color{maincolor}#1}}
-\newcommand{\minor}[1]{\textcolor{black!50}{#1}}
-\newcommand{\minoritem}{\item[{\textcolor{black!50}{$\blacktriangleright$}}]}
-\newcommand{\code}[1]{\texttt{#1}}
-\usepackage{xspace}
-\makeatletter 
-\xspaceaddexceptions{\grqq \grq \csq@qclose@i \} } 
-\makeatother
-\usefonttheme[onlymath]{serif}
-\usepackage{multicol}
-\newcommand{\hyper}[1]{\bet{\underline{\smash{#1}}}}
+  \usepackage{sourcecodepro}
+  \usepackage[default]{sourcesanspro}
+  \usepackage{nimbusmononarrow}
+  %\usepackage{ellipsis}
+  \newcommand{\bet}[1]{\textbf{\color{maincolor}#1}}
+  \newcommand{\minor}[1]{\textcolor{black!50}{#1}}
+  \newcommand{\minoritem}{\item[{\textcolor{black!50}{$\blacktriangleright$}}]}
+  \newcommand{\code}[1]{\texttt{#1}}
+  \usepackage{xspace}
+  \makeatletter 
+  \xspaceaddexceptions{\grqq \grq \csq@qclose@i \} } 
+  \makeatother
+  \usefonttheme[onlymath]{serif}
+  \usepackage{multicol}
+  \newcommand{\hyper}[1]{\bet{\underline{\smash{#1}}}}
 % ===========================================================
 
-% Farben	
+% Farben  
 % ===========================================================
-	\usepackage{xcolor}
-	\definecolor{fbblau}{HTML}{3078AB}
-	\definecolor{mediumgray}{gray}{.65}
-	\definecolor{blackberry}{rgb}{0.53, 0.0, 0.25}
+  \usepackage{xcolor}
+  \definecolor{fbblau}{HTML}{3078AB}
+  \definecolor{mediumgray}{gray}{.65}
+  \definecolor{blackberry}{rgb}{0.53, 0.0, 0.25}
 % ===========================================================
 
-	
+  
 % Mathe-Pakete
 % ===========================================================
-	\usepackage{mathtools}
-	\usepackage{amssymb}
-	\usepackage[bigdelims]{newtxmath}
-	\usepackage{wasysym}
-	
-	% ggfs. anpassen, um Abstände nach Formeln zu modifizieren
-	\newcommand{\zerodisplayskips}{%
-		%\setlength{\abovedisplayskip}{0pt}%
-		%\setlength{\belowdisplayskip}{0pt}%
-		%\setlength{\abovedisplayshortskip}{0pt}%
-		%\setlength{\belowdisplayshortskip}{0pt}
-		%\setlength{\multicolsep}{0pt}
-	}
-	\appto{\normalsize}{\zerodisplayskips}
-	\appto{\small}{\zerodisplayskips}
-	\appto{\footnotesize}{\zerodisplayskips}
+  \usepackage{mathtools}
+  \usepackage{amssymb}
+  \usepackage[bigdelims]{newtxmath}
+  \usepackage{wasysym}
+  
+  % ggfs. anpassen, um Abstände nach Formeln zu modifizieren
+  \newcommand{\zerodisplayskips}{%
+    %\setlength{\abovedisplayskip}{0pt}%
+    %\setlength{\belowdisplayskip}{0pt}%
+    %\setlength{\abovedisplayshortskip}{0pt}%
+    %\setlength{\belowdisplayshortskip}{0pt}
+    %\setlength{\multicolsep}{0pt}
+  }
+  \appto{\normalsize}{\zerodisplayskips}
+  \appto{\small}{\zerodisplayskips}
+  \appto{\footnotesize}{\zerodisplayskips}
 % ===========================================================
 
 % TikZ
 % ===========================================================
-	\usepackage{tikz}
-	\usepackage{tikz-cd}					% kommutative Diagramme
-	\usetikzlibrary{arrows.meta}			% mehr Pfeile!
-	\usetikzlibrary{calc}
-	\tikzset{>=Latex}						% Standard-Pfeilspitze
+  \usepackage{tikz}
+  \usepackage{tikz-cd}          % kommutative Diagramme
+  \usetikzlibrary{arrows.meta}      % mehr Pfeile!
+  \usetikzlibrary{calc}
+  \tikzset{>=Latex}            % Standard-Pfeilspitze
 % ===========================================================
 
 % listings
 % ===========================================================
-\usepackage{listingsutf8}
-\lstset{
-	belowcaptionskip=1\baselineskip,
-	breaklines=true,
-	showstringspaces=false,
-	basicstyle=\ttfamily,
-	keywordstyle=\bfseries\color{green!40!black},
-	commentstyle=\itshape\color{purple!40!black},
-	stringstyle=\color{orange},
-	numbers=left,
-	numberstyle=\footnotesize\ttfamily\color{maincolor},
-	inputencoding=utf8/latin1,
-	tabsize=4,
-}
+  \usepackage{listingsutf8}
+  \lstset{
+    belowcaptionskip=1\baselineskip,
+    breaklines=true,
+    showstringspaces=false,
+    basicstyle=\ttfamily,
+    keywordstyle=\bfseries\color{green!40!black},
+    commentstyle=\itshape\color{purple!40!black},
+    stringstyle=\color{orange},
+    numbers=left,
+    numberstyle=\footnotesize\ttfamily\color{maincolor},
+    inputencoding=utf8/latin1,
+    tabsize=4,
+  }
 % ===========================================================
 
 % Bibliographie
 % ===========================================================
-\usepackage[%
-	backend=biber,
-	sortlocale=auto,
-	natbib,
-	hyperref,
-	backref=false,
-	style=numeric,
-]{biblatex}
-\addbibresource{bibliography.bib}
-\setbeamertemplate{bibliography item}[text]
-\renewcommand*{\bibfont}{\footnotesize}
-\hypersetup{citecolor=maincolor}
-\nocite{*}		% auch Quellen ohne Nennungen ausgeben
+  \usepackage[%
+    backend=biber,
+    sortlocale=auto,
+    natbib,
+    hyperref,
+    backref=false,
+    style=numeric,
+  ]{biblatex}
+  \addbibresource{bibliography.bib}
+  \setbeamertemplate{bibliography item}[text]
+  \renewcommand*{\bibfont}{\footnotesize}
+  \hypersetup{citecolor=maincolor}
+  \nocite{*}    % auch Quellen ohne Nennungen ausgeben
 % ===========================================================
 
 % beamer-Konfiguration
 % ===========================================================
-\setbeamertemplate{section in toc}[sections numbered]	% nummeriert sections in Inhaltsverzeichnis
-
-% Inhaltsverzeichnis bei section-Wechsel anzeigen
-\AtBeginSection[]{
-	\begin{frame}[t]
-		\tableofcontents[currentsection, hidesubsections, hideothersubsections,sectionstyle=show/shaded]
-	\end{frame}}
+  \setbeamertemplate{section in toc}[sections numbered]  % nummeriert sections in Inhaltsverzeichnis
+  
+  % Inhaltsverzeichnis bei section-Wechsel anzeigen
+  \AtBeginSection[]{
+    \begin{frame}[t]
+      \tableofcontents[currentsection, hidesubsections, hideothersubsections,sectionstyle=show/shaded]
+    \end{frame}}
 % ===========================================================
 
 
@@ -132,19 +129,19 @@
 \newcommand{\wt}[1]{\widetilde{#1}}
 \newcommand{\wh}[1]{\widehat{#1}}
 
-\DeclareMathOperator{\id}{id} 				% Identität
-\DeclareMathOperator{\pot}{\mathcal{P}}		% Potenzmenge
+\DeclareMathOperator{\id}{id}         % Identität
+\DeclareMathOperator{\pot}{\mathcal{P}}    % Potenzmenge
 
 % Klammerungen und ähnliches
-\DeclarePairedDelimiter{\absolut}{\lvert}{\rvert}		% Betrag
-\DeclarePairedDelimiter{\ceiling}{\lceil}{\rceil}		% aufrunden
-\DeclarePairedDelimiter{\Floor}{\lfloor}{\rfloor}		% aufrunden
-\DeclarePairedDelimiter{\Norm}{\lVert}{\rVert}			% Norm
-\DeclarePairedDelimiter{\sprod}{\langle}{\rangle}		% spitze Klammern
-\DeclarePairedDelimiter{\enbrace}{(}{)}					% runde Klammern
-\DeclarePairedDelimiter{\benbrace}{\lbrack}{\rbrack}	% eckige Klammern
-\DeclarePairedDelimiter{\penbrace}{\{}{\}}				% geschweifte Klammern
-\newcommand{\Underbrace}[2]{{\underbrace{#1}_{#2}}} 	% bessere Unterklammerungen
+\DeclarePairedDelimiter{\absolut}{\lvert}{\rvert}    % Betrag
+\DeclarePairedDelimiter{\ceiling}{\lceil}{\rceil}    % aufrunden
+\DeclarePairedDelimiter{\Floor}{\lfloor}{\rfloor}    % aufrunden
+\DeclarePairedDelimiter{\Norm}{\lVert}{\rVert}      % Norm
+\DeclarePairedDelimiter{\sprod}{\langle}{\rangle}    % spitze Klammern
+\DeclarePairedDelimiter{\enbrace}{(}{)}          % runde Klammern
+\DeclarePairedDelimiter{\benbrace}{\lbrack}{\rbrack}  % eckige Klammern
+\DeclarePairedDelimiter{\penbrace}{\{}{\}}        % geschweifte Klammern
+\newcommand{\Underbrace}[2]{{\underbrace{#1}_{#2}}}   % bessere Unterklammerungen
 % Kurzschreibweisen für Faule und Code-Vervollständigung
 \newcommand{\abs}[1]{\absolut*{#1}}
 \newcommand{\ceil}[1]{\ceiling*{#1}}
